@@ -4,5 +4,6 @@ build/
 /.vscode
 /integration/*/pbjs.js
 /integration/*/pbjs.d.ts
+/.log
 coverage/
 yarn-error.log
