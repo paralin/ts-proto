@@ -271,7 +271,7 @@ function createObservableUnaryMethod(ctx: Context): Code {
         metadata && this.options.metadata
           ? new ${BrowserHeaders}({ ...this.options?.metadata.headersMap, ...metadata?.headersMap })
           : metadata || this.options.metadata;
-      return new Observable(observer => {
+      return new imp('Observable@rxjs')(observer => {
         ${grpc}.unary(methodDesc, {
           request,
           host: this.host,

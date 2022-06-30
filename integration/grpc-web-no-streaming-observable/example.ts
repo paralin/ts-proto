@@ -2,7 +2,7 @@
 import { grpc } from '@improbable-eng/grpc-web';
 import { BrowserHeaders } from 'browser-headers';
 import { take } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import type { Observable } from 'rxjs';
 import * as _m0 from 'protobufjs/minimal';
 
 export const protobufPackage = 'rpx';
@@ -394,7 +394,7 @@ export class GrpcWebImpl {
       metadata && this.options.metadata
         ? new BrowserHeaders({ ...this.options?.metadata.headersMap, ...metadata?.headersMap })
         : metadata || this.options.metadata;
-    return new Observable((observer) => {
+    return new imp('Observable@rxjs')((observer) => {
       grpc.unary(methodDesc, {
         request,
         host: this.host,

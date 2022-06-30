@@ -2,7 +2,7 @@
 import { grpc } from '@improbable-eng/grpc-web';
 import { BrowserHeaders } from 'browser-headers';
 import { share } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import type { Observable } from 'rxjs';
 import * as _m0 from 'protobufjs/minimal';
 
 export const protobufPackage = 'rpx';

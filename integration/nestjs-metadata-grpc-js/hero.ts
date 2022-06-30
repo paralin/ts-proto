@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { GrpcMethod, GrpcStreamMethod } from '@nestjs/microservices';
 import { Metadata } from '@grpc/grpc-js';
-import { Observable } from 'rxjs';
+import type { Observable } from 'rxjs';
 
 export const protobufPackage = 'hero';
 
