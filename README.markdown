@@ -381,6 +381,8 @@ Generated code will be placed in the Gradle build directory.
 
 - With `--ts_proto_opt=outputServices=false`, or `=none`, ts-proto will output NO service definitions.
 
+- With `--ts_proto_opt=useAsyncIterable=true`, the generated services will use `AsyncIterable` instead of `Observable`.
+
 - With `--ts_proto_opt=emitImportedFiles=false`, ts-proto will not emit `google/protobuf/*` files unless you explicit add files to `protoc` like this
   `protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto my_message.proto google/protobuf/duration.proto`
 
@@ -410,6 +412,7 @@ Generated code will be placed in the Gradle build directory.
 
   Requires `onlyTypes=true`. Implies `useDate=string` and `stringEnums=true`. This option is to generate types that can be directly used with marshalling/unmarshalling Protobuf messages serialized as JSON.  
   You may also want to set `useOptionals=all`, as gRPC gateways are not required to send default value for scalar values.
+
 
 ### NestJS Support
 
